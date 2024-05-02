@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EVega.Models
 {
@@ -11,6 +12,11 @@ namespace EVega.Models
         public decimal Nota { get; set; }
         public Boolean Estado { get; set; }
         public DateTime Fecha { get; set; }
+
+        [ForeignKey("CarreraId")]
+        public int IdCarrera { get; set; }
+        public Carrera Carrera { get; set; }
+        
 
         
 

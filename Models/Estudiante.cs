@@ -9,7 +9,7 @@ namespace EVega.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public decimal Nota { get; set; }
+        public float Nota { get; set; }
         public Boolean Estado { get; set; }
         public DateTime Fecha { get; set; }
 

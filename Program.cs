@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using EVega.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<EVegaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EVegaContext") ?? throw new InvalidOperationException("Connection string 'EVegaContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

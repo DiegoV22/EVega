@@ -14,8 +14,8 @@ namespace EVega.Models
         public DateTime Fecha { get; set; }
 
         [ForeignKey("CarreraId")]
-        public int IdCarrera { get; set; }
-        public Carrera Carrera { get; set; }
+        public int? IdCarrera { get; set; }
+        public Carrera? Carrera { get; set; }
         
 
         
